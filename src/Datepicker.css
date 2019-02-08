@@ -1,0 +1,55 @@
+.date-picker {
+  box-shadow: 0 0 10px;
+  display: inline-block;
+}
+
+.day-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  border-collapse: collapse;
+}
+
+.day {
+  border: none;
+  background: white;
+  padding: 10px;
+  cursor: pointer;
+}
+.day:hover {
+  background: #0061ff;
+  color: white;
+  transition: 200ms;
+}
+.day:focus {
+  outline: 0;
+}
+
+.active {
+  background: #0061ff;
+  color: white;
+}
+
+.selected {
+  background-color: #224422;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0061ff;
+    color: white;
+    font-size: 1.4em;
+}
+
+.header > * {
+    padding: 10px;
+}
+
+.arrow {
+    background-color: #222222;
+    cursor: pointer;
+}
+
+body {
+    font-family: sans-serif;
+}

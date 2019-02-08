@@ -1,28 +1,22 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import Datepicker from './Datepicker'
 
 class App extends Component {
+
+  state = {
+    date: new Date()
+  }
+
+  handleClick = newDate => {
+    console.log(newDate)
+    this.setState({
+      date: newDate
+    })
+  }
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    return <Datepicker selected={this.state.date} handleClick={this.handleClick} />
   }
 }
 
-export default App;
+export default App
